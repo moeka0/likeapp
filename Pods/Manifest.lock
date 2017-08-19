@@ -1,0 +1,12 @@
+PODS:
+  - CariocaMenu (1.1)
+
+DEPENDENCIES:
+  - CariocaMenu
+
+SPEC CHECKSUMS:
+  CariocaMenu: 8a46b049005d42c0cc4e128c486c433f4c708a4b
+
+PODFILE CHECKSUM: ecd1e8e4617cf221d465176521aeceeedb31c641
+
+COCOAPODS: 1.2.1

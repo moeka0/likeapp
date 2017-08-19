@@ -1,0 +1,6 @@
+framework module Pods_likeapp {
+  umbrella header "Pods-likeapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
