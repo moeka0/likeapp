@@ -54,6 +54,10 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MyMenu">
+                            <accessibilityTraits key="traits" updatesFrequently="YES"/>
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                     </view>
                     <connections>
                         <outlet property="heartlabel" destination="b1x-oR-SQY" id="mxh-XY-QNM"/>

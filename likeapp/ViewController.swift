@@ -8,8 +8,13 @@
 
 import UIKit
 import AVFoundation
+import BTNavigationDropdownMenu
 
-class ViewController: UIViewController , AVAudioPlayerDelegate , UITextFieldDelegate{
+class ViewController: UIViewController , AVAudioPlayerDelegate{
+    
+    
+    @IBOutlet weak var selectedCellLabel: UILabel!
+    var menuView: BTNavigationDropdownMenu!
     
     var timer: Timer!
     @IBOutlet var penguin: UIImageView!
@@ -24,10 +29,6 @@ class ViewController: UIViewController , AVAudioPlayerDelegate , UITextFieldDele
     
     // UIButton のインスタンスを生成
     let button = UIButton()
-    
-    
-    
-    
     
     var number: Int = 0
     var kibunnnum: Int = 0
@@ -49,6 +50,23 @@ class ViewController: UIViewController , AVAudioPlayerDelegate , UITextFieldDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let items = ["Most Popular", "Latest", "Trending", "Nearest", "Top Picks"]
+        self.selectedCellLabel.text = items.first
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Dropdown Menu", items: items)
+        
+        
+        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
+            print("Did select item at index: \(indexPath)")
+            self.selectedCellLabel.text = items[indexPath]
+        }
+        
+        self.navigationItem.titleView = menuView
         
         
         let audioPath = Bundle.main.path(forResource: "cursor1", ofType:"mp3")!

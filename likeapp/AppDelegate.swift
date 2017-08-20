@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CariocaMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

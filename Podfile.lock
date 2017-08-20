@@ -1,12 +1,22 @@
 PODS:
-  - CariocaMenu (1.1)
+  - BTNavigationDropdownMenu (0.4.1)
 
 DEPENDENCIES:
-  - CariocaMenu
+  - BTNavigationDropdownMenu (from `https://github.com/PhamBaTho/BTNavigationDropdownMenu.git`, branch `swift-3.0`)
+
+EXTERNAL SOURCES:
+  BTNavigationDropdownMenu:
+    :branch: swift-3.0
+    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
+
+CHECKOUT OPTIONS:
+  BTNavigationDropdownMenu:
+    :commit: e11a720322afc8baa02b3ff63fcc630e4f9de577
+    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
 
 SPEC CHECKSUMS:
-  CariocaMenu: 8a46b049005d42c0cc4e128c486c433f4c708a4b
+  BTNavigationDropdownMenu: 093f3cbfad1572f2c222bdf8d17584d1e13380d4
 
-PODFILE CHECKSUM: ecd1e8e4617cf221d465176521aeceeedb31c641
+PODFILE CHECKSUM: c43001a6f6a05d03f000a9422fd7f203437fd6dc
 
 COCOAPODS: 1.2.1
